@@ -75,6 +75,7 @@ function updateSlider() {
 
 function modelReady() {
     button.disabled = false;
+    button.innerHTML = 'Generar verbos'
 }
 
 // Generate new text
