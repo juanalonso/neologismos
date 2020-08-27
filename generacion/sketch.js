@@ -127,7 +127,12 @@ function generate() {
                 }
             }
 
-            var infinitivo = newVerbs.shift();
+            var infinitivo;
+            if (newVerbs.length == 0) {
+                infinitivo = "generar";
+            } else {
+                infinitivo = newVerbs.shift();
+            }
             if (infinitivo.slice(-2) == 'se') {
                 infinitivo = infinitivo.slice(0, -2)
             }
@@ -142,21 +147,11 @@ function generate() {
             }
             sustantivo = infinitivo.slice(0, -1) + "dor";
 
-
             var splitIndex = Math.ceil(newVerbs.length / 2);
-            var firstHalf = newVerbs.splice(0,splitIndex);
+            var firstHalf = newVerbs.splice(0, splitIndex);
             resultNew1.innerHTML = firstHalf.join("\n");
             resultNew2.innerHTML = newVerbs.join("\n");
 
-            // var counter = 0;
-            // for (var f = 0; f < newVerbs.length; f++) {
-            //     if (counter % 2 == 0) {
-            //         resultNew1.innerHTML = resultNew1.innerHTML + newVerbs[f] + '\n';
-            //     } else {
-            //         resultNew2.innerHTML = resultNew2.innerHTML + newVerbs[f] + '\n';
-            //     }
-            //     counter++;
-            // }
             resultExisting.innerHTML = existingVerbs.join(", ");
 
             runningInference = false;
