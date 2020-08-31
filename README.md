@@ -1,5 +1,5 @@
 # Neologismos
-**Neologismos** es una red neuronal LSTM que genera verbos del castellano y corre en el navegador sin necesidad de instalar ningún tipo de software ni GPU.  
+**Neologismos** es una red neuronal LSTM que genera verbos del castellano y corre en el navegador sin necesidad de instalar ningún tipo de software ni GPU. En este hilo lo explico: https://twitter.com/kokuma/status/1298915751739502592 .
 
 # TL;DR
 
